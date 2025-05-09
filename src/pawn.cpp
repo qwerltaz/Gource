@@ -119,7 +119,7 @@ void Pawn::drawName() {
     float done = nametime - name_interval;
 
     if(done < 1.0) {
-        drawNameText(done);
+        drawNameText(done * 5.0);
     } else if(done > 1.0 && done < nametime - 1.0) {
         drawNameText(1.0);
     } else {

@@ -484,7 +484,7 @@ void GourceSettings::setGourceDefaults() {
     caption_colour   = vec3(1.0f, 1.0f, 1.0f);
 
     filename_colour  = vec3(1.0f, 1.0f, 1.0f);
-    filename_time = 4.0f;
+    filename_time = 0.3f;
 
     gStringHashSeed = 31;
 
