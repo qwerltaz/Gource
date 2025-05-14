@@ -939,6 +939,15 @@ void RDirNode::drawDirName(FXFont& dirfont) const{
     vec2 label_pos = spline.getLabelPos();
 
     dirfont.setAlpha(alpha);
+
+    // Don't draw names of frequent and uninteresting directories.
+    std::list<std::string> skip_list = {"Components", "EntitySystems", "Systems"};
+    for (const auto& skip : skip_list) {
+        if (path_token.find(skip) != std::string::npos) {
+            return;
+        }
+    }
+
     dirfont.draw(label_pos.x, label_pos.y, path_token);
 }
 
