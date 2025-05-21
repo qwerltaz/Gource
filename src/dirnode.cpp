@@ -941,7 +941,7 @@ void RDirNode::drawDirName(FXFont& dirfont) const{
     dirfont.setAlpha(alpha);
 
     // Don't draw names of frequent and uninteresting directories.
-    std::list<std::string> skip_list = {"Components", "EntitySystems", "Systems"};
+    std::list<std::string> skip_list = {"Components", "EntitySystems", "Systems", "UI"};
     for (const auto& skip : skip_list) {
         if (path_token.find(skip) != std::string::npos) {
             return;
