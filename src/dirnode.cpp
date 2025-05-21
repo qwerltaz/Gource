@@ -934,7 +934,7 @@ void RDirNode::drawDirName(FXFont& dirfont) const{
 
     if(!gGourceSettings.highlight_dirs && since_last_node_change > 5.0) return;
 
-    float alpha = gGourceSettings.highlight_dirs ? 1.0 : std::max(0.0f, 0.5f - since_last_node_change) / 0.1f;
+    float alpha = gGourceSettings.highlight_dirs ? 1.0 : std::max(0.0f, 2.0f - since_last_node_change) / 0.1f;
 
     vec2 label_pos = spline.getLabelPos();
 
